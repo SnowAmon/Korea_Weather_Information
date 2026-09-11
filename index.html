@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>기상청 날씨 안내 전광판 (1280x128)</title>
+
+  <!-- 브라우저 탭 및 SNS 공유 시 표시될 제목 -->
+  <title>실시간 기상 정보 전광판</title>
+  <meta property="og:title" content="실시간 기상 정보 전광판">
+
   <style>
     * {
       margin: 0;
@@ -300,7 +304,7 @@
       }
     }
 
-    // 4. 뉴스 전광판 텍스트 설정 (오류 없이 안정적인 흐름)
+    // 4. 뉴스 전광판 텍스트 설정
     function updateNewsText(regionName) {
       document.getElementById('newsBadge').textContent = `🚨 ${regionName} 지역 실시간 뉴스`;
       
