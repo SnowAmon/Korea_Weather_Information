@@ -19,7 +19,7 @@
     body {
       background-color: #050505;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-start;
       min-height: 100vh;
       overflow: hidden;
@@ -36,7 +36,7 @@
       position: relative;
       overflow: hidden;
       display: flex;
-      align-items: center; /* 전체 수직 중앙 정렬 */
+      align-items: center;
       justify-content: space-around;
       padding: 0 20px;
       color: #ffffff;
@@ -53,12 +53,12 @@
       pointer-events: none;
     }
 
-    /* 각 섹션의 공통 구분선 및 완벽한 수직 중앙 정렬 */
+    /* 각 섹션의 공통 구분선 스타일 */
     .board-section {
       display: flex;
-      height: 100%; /* 높이 풀 채움 */
-      align-items: center; /* 내부 요소 세로 중앙 정렬 */
-      justify-content: center; /* 내부 요소 가로 중앙 정렬 */
+      height: 70%;
+      align-items: center;
+      justify-content: center;
       border-right: 1px solid #1e293b;
       padding-right: 20px;
       padding-left: 15px;
@@ -73,7 +73,6 @@
     .section-time {
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
     }
 
@@ -82,7 +81,6 @@
       color: #94a3b8;
       font-weight: 600;
       white-space: nowrap;
-      margin-bottom: 2px;
     }
 
     .clock-time {
@@ -90,29 +88,24 @@
       font-weight: 800;
       color: #38bdf8;
       text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
-      line-height: 1.1;
+      letter-spacing: 0px;
       white-space: nowrap;
     }
 
     /* 2. 날씨 메인 영역 */
     .section-weather-main {
       gap: 12px;
-      align-items: center;
-      justify-content: center;
     }
 
     .weather-icon {
       font-size: 40px;
       line-height: 1;
-      display: flex;
-      align-items: center;
     }
 
     .temp-box {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
     }
 
@@ -121,7 +114,7 @@
       font-weight: 900;
       color: #ffcc00;
       text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
-      line-height: 1.1;
+      line-height: 1;
     }
 
     .weather-desc {
@@ -135,15 +128,12 @@
     /* 3. 날씨 상세 및 지역 정보 영역 */
     .section-weather-sub {
       gap: 18px;
-      align-items: center;
-      justify-content: center;
     }
 
     .sub-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
     }
 
@@ -158,9 +148,8 @@
       font-size: 18px;
       font-weight: 700;
       color: #f1f5f9;
-      margin-top: 4px;
+      margin-top: 2px;
       white-space: nowrap;
-      line-height: 1;
     }
 
     .location-value {
@@ -175,18 +164,15 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
     }
 
     .news-badge {
-      font-size: 12px;
+      font-size: 11px;
       color: #ff3366;
       font-weight: 800;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       white-space: nowrap;
       text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
-      text-align: center;
-      line-height: 1;
     }
 
     .news-ticker-container {
@@ -194,8 +180,6 @@
       overflow: hidden;
       white-space: nowrap;
       position: relative;
-      display: flex;
-      align-items: center;
     }
 
     .news-msg {
@@ -206,7 +190,6 @@
       white-space: nowrap;
       padding-left: 100%;
       animation: ticker 22s linear infinite;
-      line-height: 1.2;
     }
 
     @keyframes ticker {
